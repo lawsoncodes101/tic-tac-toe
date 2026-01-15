@@ -1,0 +1,50 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html,
+body {
+    margin: 0;
+}
+
+#container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    min-height: 60vh;
+    width: 40%;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.cell:nth-of-type(5) {
+    border: 2px solid black;
+}
+
+.cell:nth-of-type(2),
+.cell:nth-of-type(8) {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.cell:nth-of-type(4),
+.cell:nth-of-type(6) {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
