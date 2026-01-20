@@ -1,6 +1,7 @@
 *,
 *:after,
 *:before {
+    color: white;
     box-sizing: border-box;
     font-family: sans-serif;
 }
@@ -11,10 +12,51 @@ body {
 }
 
 #container {
+    background: black;
     min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+
+    input {
+        color: black;
+    }
+    button {
+        background: black;
+        
+    }
+}
+
+.gameControl {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50px;
+
+    * {
+        flex: 1;
+    }
+
+    div {
+        flex-basis: 20%;
+    }
+
+    button {
+        background: black;
+        border: 2px solid grey;
+        border-radius: 1rem;
+        padding: 0.5rem;
+        transition: 0.3s ease;
+    }
+    button:hover {
+        border: 2px solid grey;
+        background: grey;
+    }
 }
 
 .board {
@@ -34,17 +76,21 @@ body {
 }
 
 .cell:nth-of-type(5) {
-    border: 2px solid black;
+    border: 2px solid white;
 }
 
 .cell:nth-of-type(2),
 .cell:nth-of-type(8) {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid white;
+    border-right: 2px solid white;
 }
 
 .cell:nth-of-type(4),
 .cell:nth-of-type(6) {
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+.winner {
+    background: grey;
 }

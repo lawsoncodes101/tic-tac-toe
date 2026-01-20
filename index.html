@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project: Tic Tac Toe</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <div id="container">
-        <div class="board">
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
-            <div class="cell"></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Project: Tic Tac Toe</title>
+        <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <dialog id="playerDialog">
+                <form method="dialog">
+                    <input type="text" placeholder="Who's X?" id="playerOne" />
+                    <input type="text" placeholder="Who's O?" id="playerTwo" />
+                    <button type="submit">Continue</button>
+                </form>
+            </dialog>
+
+            <div class="gameControl">
+                <div>Player Turn: <span class="playerTurn"></span></div>
+                <button class="start">Start Game</button>
+                <button class="reset">Reset</button>
+            </div>
+            <div class="board">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
